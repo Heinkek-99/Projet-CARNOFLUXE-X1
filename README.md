@@ -1,7 +1,8 @@
-# Projet-CARNOFLUXE-X1
+﻿# Projet-CARNOFLUXE-X1
  Projet consistant à créer différents serveur afin de permettre aux différentes utilisateurs une bonne connectivité entre machines et accès à un site web
 
-<h2>Procédure d'installation</h2>
+
+	Procédure d'installation des différents serveurs
 
 I.	Procédure d’installation du serveur HTTP (apache).
 
