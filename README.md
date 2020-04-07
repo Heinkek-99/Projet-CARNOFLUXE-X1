@@ -1,9 +1,9 @@
 # Projet-CARNOFLUXE-X1
  Projet consistant à créer différents serveur afin de permettre aux différentes utilisateurs une bonne connectivité entre machines et accès à un site web
 
-#Procédure d'installation
+<h2>Procédure d'installation</h2>
 
-#I.	Procédure d’installation du serveur HTTP (apache).
+I.	Procédure d’installation du serveur HTTP (apache).
 
 1-	Définir le nom de la machine 
 nano /etc/hosts 
@@ -12,6 +12,7 @@ nano /etc/hosts
 nano /etc/hostname 
 
 3-	Redémarrer : reboot
+
 4-	Configurer l’adresse IP de la machine
 nano /etc/network/interfaces
 
@@ -30,20 +31,20 @@ nano /etc/resolv.conf
 		nameserver ***.***.***.***
 
 6-	Installer le service apache
+
 7-	apt-get install apache2
 
 8-	Créer les répertoires qui contiendront les fichiers vhost
-mkdir /var/www/supervision/
-mkdir /var/www/carnofluxe/
+
+#	mkdir /var/www/supervision/
+#	mkdir /var/www/carnofluxe/
 
 9-	Placer un fichier index.html dans chaque répertoire
-nano /var/www/supervision/index.html
-nano /var/www/carnofluxe/index.html
-
-
-
+#	nano /var/www/supervision/index.html
+#	nano /var/www/carnofluxe/index.html
 
 10-	Ajouter le code index.html dans carnofluxe
+
 <html>
    <head>
       <title>SITE CARNOFLUXE</title>
@@ -56,7 +57,10 @@ nano /var/www/carnofluxe/index.html
 
 </html>
 
+
 11-	Ajouter le code index.html dans supervision
+
+
 <html>
    <head>
       <title>SITE-SUPERVISION CARNOFLUXE</title>
@@ -68,10 +72,11 @@ nano /var/www/carnofluxe/index.html
 
 </html>
 
+
 12-	Créer les vhost
-nano /etc/apache2/sites-available/carnofluxe.domain.conf
-nano /etc/apache2/sites-available/carnofluxe.local.conf
-nano /etc/apache2/sites-available/default.conf
+#	nano /etc/apache2/sites-available/carnofluxe.domain.conf
+#	nano /etc/apache2/sites-available/carnofluxe.local.conf
+#	nano /etc/apache2/sites-available/default.conf
 
 13-	Ajouter le code de configuration de carnofluxe.domain.conf
 <VirtualHost *:80>
@@ -148,9 +153,9 @@ Pour que le ssh marche parfaitement le mieux est de l’utiliser en mode utilisa
 20-	Configurer crontab
 crontab -e
 
-#II.	Procédure d’installation du serveur DNS maître et DHCP
+II.	Procédure d’installation du serveur DNS maître et DHCP
 
-#a-	Serveur DHCP
+a-	Serveur DHCP
 Tout d’abord faut installer les paquets isc-dhcp-server. Tapez :
 # apt-get install isc-dhcp-server
 
@@ -192,7 +197,7 @@ Pour finir tapez :
 #	/etc/init.d/isc-dhcp-server restart 
 Pour redémarrer le service DHCP
 
-#b-	Serveur DNS Maître
+b-	Serveur DNS Maître
 	Installer les paquets bind9
 #	apt-get install bind9 bind9tils dnsutils
 	Changer le nom de la machine 
@@ -268,7 +273,7 @@ Pour verifier la synthaxe des fichiers bind9, tapez:
 Pour finir, nous pouvons maintenant rédemarrer le bind9 pour appliquer les modifications efféctuer précédement. Tapez:
 #	service bind9 restart
 
-#c-	Serveur DNS Slave
+c-	Serveur DNS Slave
 
 	Changer le nom de la machine 
 # 	nano etc/hostname
