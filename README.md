@@ -157,7 +157,9 @@ crontab -e
 II.	Procédure d’installation du serveur DNS maître et DHCP
 
 a-	Serveur DHCP
+
 Tout d’abord faut installer les paquets isc-dhcp-server. Tapez :
+
 # apt-get install isc-dhcp-server
 
 Avant toute chose il faut stopper le reseau de la machine virtuelle. Tapez 
