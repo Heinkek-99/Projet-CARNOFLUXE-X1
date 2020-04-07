@@ -1,9 +1,7 @@
 # Projet-CARNOFLUXE-X1
  Projet consistant à créer différents serveur afin de permettre aux différentes utilisateurs une bonne connectivité entre machines et accès à un site web
 
-#Procédure d'installation
-
-#I.	Procédure d’installation du serveur HTTP (apache).
+Procédure d'installation
 
 1-	Définir le nom de la machine 
 nano /etc/hosts 
